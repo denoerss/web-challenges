@@ -1,2 +1,6 @@
+<div allign="center">
+  
 # Web Challenges
-Web Development Bootcamp @ Neue Fische 🐡
+
+These Web Challenges document my learning path <br>
+in the [Web Development Bootcamp](https://www.neuefische.de/bootcamp/web-development) @ Neue Fische 🐡
