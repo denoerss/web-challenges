@@ -6,7 +6,7 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 3fr 5fr;
   height: 100vh;
 }
 
@@ -22,7 +22,10 @@ section {
 
 button {
   background-color: white;
-  padding: 8px 25px;
+  padding: 15px 25px;
+  font-size: 14pt;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 /* Your exercise starts here. */
@@ -32,18 +35,31 @@ Make sure not to put your code into the comments, because then nothing will happ
 
 .button1 {
   /* Style me! Change my border, set a border radius or try out other styles. :) */
+  border-width: 5px;
+  border-radius: 20px;
+  border-color: pink;
+  border-style: dotted;
 }
 
 .button2 {
   /* Style me! Change my color or background-color, or both! You can experiment with different color formats here, like HEX, RGB, etc. */
+  background-color: #124567; /*hex*/
+  background-color: rgb(25, 25, 25); /*rgb black*/
+  background-color: pink; /*color update test*/
+  color: #fff;
 }
 
 .button3 {
   /* Style me! You can test out changing the font, font size, ...*/
+  font-size: 15px;
+  font-family: Comic;
+  font-style: oblique;
 }
 
 .button4 {
   /* Style me! Can you add a shadow to this button? Try playing around with shadow properties - you can even change the shadow color, size, and more. */
+  border-radius: 10px;
+  box-shadow: 7px 7px 7px pink, -0.7em -0.5em 0.4em skyblue;
 }
 
 /* Feel free to play around with other properties, too. */
