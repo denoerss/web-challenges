@@ -27,4 +27,9 @@ div {
   border-radius: 8px;
 
   /* ✨ Feel free to experiment! */
+
+  /*center text*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
