@@ -54,6 +54,17 @@ ul {
   width: max-content;
 }
 
+ul .user {
+  background-color: pink; /*(FOR TEST-PURPOSE)*/
+  .bio {
+    display: none;
+  }
+  .location {
+    text-align: left;
+    color: darkslategray;
+  }
+}
+
 li {
   margin: 8px 0;
 }
