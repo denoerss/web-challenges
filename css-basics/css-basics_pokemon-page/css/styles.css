@@ -12,7 +12,7 @@
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements in your code via inheritance. Which selector do we need for this? */
 
 /* Add selector */
- {
+* {
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
