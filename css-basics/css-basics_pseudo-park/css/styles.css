@@ -38,10 +38,10 @@
   💡 Select the animals by their class names and use the text-align property.
 */
 
-.animal.giraffe {
+.giraffe {
   text-align: center;
 }
-.animal.dino {
+.dino {
   text-align: right;
 }
 /* 
@@ -53,3 +53,13 @@
 
   💡 You'll need to use a pseudo-class selector for each animal.
 */
+
+.crocodile:hover {
+  background-color: lightblue;
+}
+.giraffe:hover {
+  background-color: lightgreen;
+}
+.dino:hover {
+  background-color: lightsalmon;
+}
