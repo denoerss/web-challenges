@@ -40,7 +40,10 @@ h1 h2 h3 h4 h5 h6 {
 */
 
 .title {
-  /* Your solution */
+  background-color: #fff;
+  margin-top: 0;
+  padding: 10px;
+  text-align: center;
 }
 
 /* ------- Sections ------- */
