@@ -57,7 +57,17 @@ h1 h2 h3 h4 h5 h6 {
 */
 
 section {
-  /* Your solution */
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border: 0;
+  border-left: 5px;
+  border-left-color: orange;
+  border-style: solid;
+}
+
+.favourites {
+  border-left-color: gold;
 }
 
 /* ------- Headings Part 2 ------- */
