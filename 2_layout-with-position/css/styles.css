@@ -25,6 +25,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  text-align: center;
 }
 
 .header__text {
@@ -44,12 +45,17 @@ body {
   background: #140523;
   color: #ffffff;
   height: 48px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  padding-top: 10px;
 }
 
-/**
- *
+/*
  * Define the card as the reference frame for its descendant elements that require absolute positioning.
- */
+*/
+
 .card {
   margin: 20px 10%;
   border: 5px solid #252629;
@@ -60,6 +66,7 @@ body {
 
 .card__heading {
   margin: 0 0 10px 0;
+  position: relative;
 }
 
 /**
