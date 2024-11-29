@@ -48,7 +48,6 @@ body {
   width: 100%;
   position: fixed;
   bottom: 0;
-  display: flex;
   text-align: center;
   padding-top: 10px;
 }
@@ -63,17 +62,20 @@ body {
   padding: 3% 10%;
   scroll-margin-top: 100px;
   border-radius: 2rem;
+  position: relative;
 }
 
 .card__heading {
   margin: 0 0 10px 0;
-  position: absolute;
 }
 
 /**
  * Place the bookmark in the top-right corner of each card.
  */
 .card__bookmark {
+  position: absolute;
+  right: 15px;
+  top: 15px;
   border: 2px solid #ff4a11;
   font-size: 2em;
   padding: 6px 12px;
