@@ -88,6 +88,9 @@ body {
  * and remains fixed in place when the document is scrolled.
  */
 .goto-top {
+  position: fixed;
+  bottom: 70px;
+  left: 20px;
   width: 48px;
   height: 48px;
   padding: 8px;
