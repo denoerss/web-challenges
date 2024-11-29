@@ -27,8 +27,42 @@ aside {
   position: relative;
 }
 
+aside .user {
+  /*background-color: pink; (FOR TEST-PURPOSE)*/
+  max-width: 250px;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+aside .user .name {
+  /*background-color: red; (FOR TEST-PURPOSE)*/
+  font-size: 16px;
+}
+
+aside .user .bio {
+  /*background-color: rosybrown; (FOR TEST-PURPOSE)*/
+  font-size: 12px;
+  margin: 6px 0;
+}
+
+aside .user .location {
+  /* background-color: lightcoral; (FOR TEST-PURPOSE)*/
+  font-size: 10px;
+}
+
 ul {
   width: max-content;
+}
+
+ul .user {
+  background-color: pink; /*(FOR TEST-PURPOSE)*/
+  .bio {
+    display: none;
+  }
+  .location {
+    text-align: left;
+    color: darkslategray;
+  }
 }
 
 li {
