@@ -8,6 +8,12 @@
   --color-granite: rgb(37 38 41);
   --color-nemo: rgb(255 74 17);
   --color-foam: rgb(255 255 255);
+
+  --border-radius: 4px;
+  --letter-spacing: ;
+  --spacing-8: ;
+  --spacing-16: ;
+  --spacing-32: ;
 }
 
 body {
@@ -64,7 +70,7 @@ figure {
   margin: 0;
   padding: 10px;
   background-color: var(--color-nemo);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 figcaption {
@@ -81,7 +87,7 @@ a {
   display: inline-block;
   font-size: smaller;
   padding: 8px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   background-color: var(--color-nemo);
   color: var(--color-foam);
 }
@@ -95,7 +101,7 @@ a:focus-visible {
 mark {
   background-color: var(--color-nemo);
   color: var(--color-foam);
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   letter-spacing: 0.025em;
 }
 
