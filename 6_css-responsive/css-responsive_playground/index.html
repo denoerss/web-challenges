@@ -55,7 +55,19 @@
           </p>
           <div class="box box--five">
             <!-- You might want to use the <picture> element here. -->
-            <img src="./img/cat_small.jpg" alt="A cat" />
+            <picture>
+              <source
+                srcset="./img/cat_large.jpg"
+                media="(min-width: 1199px)"
+                alt="A large cat"
+              />
+              <source
+                srcset="./img/cat_medium.jpg"
+                media="(min-width: 599px)"
+                alt="A medium cat"
+              />
+              <img src="./img/cat_small.jpg" alt="A small cat" />
+            </picture>
           </div>
         </section>
       </section>
