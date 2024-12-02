@@ -10,10 +10,11 @@
   --color-foam: rgb(255 255 255);
 
   --border-radius: 4px;
-  --letter-spacing: ;
-  --spacing-8: ;
-  --spacing-16: ;
-  --spacing-32: ;
+  --letter-spacing: 0.025em;
+
+  --value-8: 8px;
+  --value-16: 16px;
+  --value-32: 32px;
 }
 
 body {
@@ -31,13 +32,13 @@ h1 {
   color: var(--color-foam);
   line-height: 1.4;
   margin: 0;
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing);
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--value-16);
 }
 
 h2 {
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing);
 }
 
 strong {
@@ -47,8 +48,8 @@ strong {
 section {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
-  padding: 16px;
+  gap: var(--value-32);
+  padding: var(--value-16);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -80,13 +81,13 @@ figcaption {
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--value-8) var(--value-16);
 }
 
 a {
   display: inline-block;
   font-size: smaller;
-  padding: 8px;
+  padding: var(--value-8);
   border-radius: var(--border-radius);
   background-color: var(--color-nemo);
   color: var(--color-foam);
@@ -102,7 +103,7 @@ mark {
   background-color: var(--color-nemo);
   color: var(--color-foam);
   border-radius: var(--border-radius);
-  letter-spacing: 0.025em;
+  letter-spacing: var(--letter-spacing);
 }
 
 ::selection {
