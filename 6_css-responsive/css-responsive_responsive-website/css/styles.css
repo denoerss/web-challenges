@@ -247,7 +247,7 @@ CSS based on conditions such as viewport width, etc. */
     align-items: top;
     grid-template-columns: 1fr 1fr;
     padding: 0 2%;
-    gap: 2% 4%;
+    gap: 2fr;
     .product-card,
     .intro-text {
       width: 100%;
@@ -259,11 +259,5 @@ CSS based on conditions such as viewport width, etc. */
 /* Media Query Desktop */
 /* --- */
 @media (min-width: 1200px) {
-  .card-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-row: 1;
-    grid-column: 1 / 2;
-  }
 }
 /* --- */
