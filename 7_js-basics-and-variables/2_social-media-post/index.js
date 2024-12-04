@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const postTitle = "A title for the post";
+const textContent = "Text content for the post";
+let likeCount = 3456;
+const userName = "denoers";
+const isReported = false;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
+console.log(postTitle, textContent, likeCount, userName, isReported);
 
+//Increment the like count by one
+likeCount += 1;
+
+//Log the updated like count
+console.log(likeCount);
 // --^-- write your code here --^--
