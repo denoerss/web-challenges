@@ -24,3 +24,4 @@ month = 12;
 totalSavings = startingBlanace + monthlyConstribution * month;
 // 3.
 console.log(totalSavings);
+// 4. RUN
