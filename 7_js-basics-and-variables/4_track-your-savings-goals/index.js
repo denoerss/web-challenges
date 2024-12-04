@@ -16,9 +16,9 @@ Let's build a small program to track your savings goals!
 */
 
 // SOLUTION
-
 // 1.
-
 startingBlanace = 1000;
 monthlyConstribution = 150;
 month = 12;
+// 2.
+totalSavings = startingBlanace + monthlyConstribution * month;
