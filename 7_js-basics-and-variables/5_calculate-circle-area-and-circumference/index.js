@@ -21,3 +21,5 @@ const circleRadius = 5;
 const circleArea = Math.PI * circleRadius ** 2;
 // 3.
 circumference = 2 * Math.PI * circleRadius;
+// 4.
+console.log(circumference);
