@@ -22,3 +22,5 @@ monthlyConstribution = 150;
 month = 12;
 // 2.
 totalSavings = startingBlanace + monthlyConstribution * month;
+// 3.
+console.log(totalSavings);
