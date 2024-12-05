@@ -26,25 +26,34 @@ For each operation (add, subtract, multiply, divide, exponent, and modulo):
 4. Log the result to the console.
 */
 
-// --v-- write your code here --v--
 addButton.addEventListener("click", () => {
-  console.log(operand1 + operand2);
+  let result = operand1 + operand2;
+  console.log(result);
 });
+
 substractButton.addEventListener("click", () => {
-  console.clear();
-  console.log(operand1 - operand2);
+  let result = operand1 - operand2;
+  console.log(result);
 });
+
 multiplyButton.addEventListener("click", () => {
-  console.log(operand1 * operand2);
+  let result = operand1 * operand2;
+  console.log(result);
 });
+
 divideButton.addEventListener("click", () => {
-  console.log(operand1 / operand2);
+  let result = operand1 / operand2;
+  console.log(result);
 });
+
 exponentButton.addEventListener("click", () => {
-  console.log(operand1 ** operand2);
+  let result = operand1 ** operand2;
+  console.log(result);
 });
+
 moduloButton.addEventListener("click", () => {
-  console.log(operand1 % operand2);
+  let result = operand1 % operand2;
+  console.log(result);
 });
 // --^-- write your code here --^--
 
