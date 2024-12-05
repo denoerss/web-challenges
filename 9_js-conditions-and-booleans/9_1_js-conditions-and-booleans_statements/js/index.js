@@ -22,6 +22,7 @@ if (number % 2 === 0) {
 }
 
 // Part 3: Hotdogs
+// SOLUTION 1 // zu kompliziert ...
 // const numberOfHotdogs = 4;
 // let pricePerHotdog = 0;
 
@@ -35,7 +36,7 @@ if (number % 2 === 0) {
 //   console.log((pricePerHotdog = 0.1), numberOfHotdogs * pricePerHotdog);
 // }
 
-// etwas simpler ...
+// SOLUTION 2 // etwas simpler ...
 const numberOfHotdogs = 42;
 let pricePerHotdog;
 
@@ -53,11 +54,11 @@ let totalPrice = numberOfHotdogs * pricePerHotdog;
 console.log(numberOfHotdogs, pricePerHotdog, totalPrice);
 
 // Part 4: Daytime
-// const currentHour = 12;
+const currentHour = 23;
 
-// const statement = "";
+const statement = currentHour < 17 ? "Still need to learn..." : "Partytime!!!";
 
-// console.log(statement);
+console.log(statement);
 
 // // Part 5: Greeting
 // const userName = "Archibald";
