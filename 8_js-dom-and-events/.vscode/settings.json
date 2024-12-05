@@ -1,0 +1,10 @@
+{
+  "terminal.integrated.cursorStyle": "underline",
+  "terminal.integrated.cursorStyleInactive": "block",
+  "terminal.integrated.cursorWidth": 1,
+  "terminal.integrated.customGlyphs": true,
+  "terminal.integrated.defaultLocation": "view",
+  "terminal.integrated.enableImages": false,
+  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.hideOnStartup": "never"
+}
