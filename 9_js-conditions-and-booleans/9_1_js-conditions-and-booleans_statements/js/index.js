@@ -21,10 +21,26 @@ if (number % 2 === 0) {
   console.log("odd number");
 }
 
-// // Part 3: Hotdogs
-// const numberOfHotdogs = 42;
+// Part 3: Hotdogs
+const numberOfHotdogs = 4;
 
-// // Part 4: Daytime
+let pricePerHotdog = 0;
+
+if (numberOfHotdogs < 5) {
+  pricePerHotdog = 2;
+} else if (numberOfHotdogs < 100) {
+  pricePerHotdog = 1.5;
+} else if (numberOfHotdogs < 1000000) {
+  pricePerHotdog = 1;
+} else {
+  pricePerHotdog = 0.1;
+}
+
+const totalPrice = numberOfHotdogs * pricePerHotdog;
+
+console.log(pricePerHotdog, totalPrice);
+
+// Part 4: Daytime
 // const currentHour = 12;
 
 // const statement = "";
