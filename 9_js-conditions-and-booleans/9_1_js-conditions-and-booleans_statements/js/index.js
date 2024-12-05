@@ -22,9 +22,22 @@ if (number % 2 === 0) {
 }
 
 // Part 3: Hotdogs
-const numberOfHotdogs = 4;
+// const numberOfHotdogs = 4;
+// let pricePerHotdog = 0;
 
-let pricePerHotdog = 0;
+// if (numberOfHotdogs < 5) {
+//   console.log((pricePerHotdog = 2), numberOfHotdogs * pricePerHotdog);
+// } else if (numberOfHotdogs < 100) {
+//   console.log((pricePerHotdog = 1.5), numberOfHotdogs * pricePerHotdog);
+// } else if (numberOfHotdogs < 1000000) {
+//   console.log((pricePerHotdog = 1), numberOfHotdogs * pricePerHotdog);
+// } else {
+//   console.log((pricePerHotdog = 0.1), numberOfHotdogs * pricePerHotdog);
+// }
+
+// etwas simpler ...
+const numberOfHotdogs = 42;
+let pricePerHotdog;
 
 if (numberOfHotdogs < 5) {
   pricePerHotdog = 2;
@@ -35,10 +48,9 @@ if (numberOfHotdogs < 5) {
 } else {
   pricePerHotdog = 0.1;
 }
+let totalPrice = numberOfHotdogs * pricePerHotdog;
 
-const totalPrice = numberOfHotdogs * pricePerHotdog;
-
-console.log(pricePerHotdog, totalPrice);
+console.log(numberOfHotdogs, pricePerHotdog, totalPrice);
 
 // Part 4: Daytime
 // const currentHour = 12;
