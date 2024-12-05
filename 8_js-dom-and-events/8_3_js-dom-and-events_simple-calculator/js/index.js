@@ -70,5 +70,11 @@ Step 2: Add event listeners to update `operand1` based on the button clicked. Lo
 */
 
 // --v-- write your code here --v--
-
+// STEP 1
+const increaseByOne = document.querySelector('[data-js="increase-by-one]');
+const increaseByFive = document.querySelector('[data-js="increase-by-five]');
+const decreaseByOne = document.querySelector('[data-js="decrease-by-one]');
+const decreaseByFive = document.querySelector('[data-js="decrease-by-five]');
+const multiplyByTwo = document.querySelector('[data-js="multiply-by-two]');
+const divideByTwo = document.querySelector('[data-js="divide-by-two]');
 // --^-- write your code here --^--
