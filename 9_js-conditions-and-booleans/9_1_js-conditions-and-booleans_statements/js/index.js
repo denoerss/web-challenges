@@ -12,8 +12,14 @@ if (receivedPassword === SUPER_SECRET_PASSWORD) {
   console.log("Access denied!");
 }
 
-// // Part 2: Even / Odd
-// const number = 6;
+// Part 2: Even / Odd
+const number = 6;
+
+if (number % 2 === 0) {
+  console.log("even number");
+} else {
+  console.log("odd number");
+}
 
 // // Part 3: Hotdogs
 // const numberOfHotdogs = 42;
