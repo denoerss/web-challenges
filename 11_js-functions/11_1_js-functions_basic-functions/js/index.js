@@ -31,9 +31,10 @@ Then:
 
 // --v-- write your code here --v--
 console.log(
-  "TITLE:",
+  "LOG 1_ALL VARIABLES",
+  "Title:",
   title,
-  "/ AUTHOR:",
+  "/ Author:",
   author,
   "/ Rating:",
   rating,
@@ -45,9 +46,10 @@ copiesSold += 143;
 rating = 4.3;
 
 console.log(
-  "TITLE:",
+  "LOG 2_INCREASED #1",
+  "Title:",
   title,
-  "/ AUTHOR:",
+  "/ Author:",
   author,
   "/ Rating:",
   rating,
@@ -66,5 +68,25 @@ console.log(
 */
 
 // --v-- write your code here --v--
+function logBookData(title, author, rating, copiesSold) {
+  console.log("Title:", title);
+  console.log("Author:", author);
+  console.log("Rating:", rating);
+  console.log("Copies Sold:", copiesSold);
+}
 
+console.log("LOG 3_FUNCTION-LOG");
+logBookData(title, author, rating, copiesSold);
+
+rating = 3.2;
+copiesSold += 12;
+
+console.log("LOG 4_INCREASED #2");
+logBookData(title, author, rating, copiesSold);
+
+rating = 3.5;
+copiesSold += 34;
+
+console.log("LOG 5_INCREASED #3");
+logBookData(title, author, rating, copiesSold);
 // --^-- write your code here --^--
