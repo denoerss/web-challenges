@@ -45,6 +45,7 @@ fruitsWithPop.pop();
 // Use the `.unshift()` array method to add "hamster" to the beginning of `unshiftedPets`.
 
 const unshiftedPets = ["dog", "cat", "rabbit"];
+unshiftedPets.unshift("hamster");
 
 // EXERCISE 9
 // Use the `.shift()` method to remove the first item from `shiftedFruits`.
