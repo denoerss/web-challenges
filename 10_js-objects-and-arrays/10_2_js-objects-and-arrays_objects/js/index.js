@@ -39,6 +39,9 @@ const petPluto = {
   species: "dog",
 };
 
+petPluto.age = 5;
+petPluto.breed = "husky";
+
 export {
   personWithNameAgeEmail,
   nameOfAlex,
