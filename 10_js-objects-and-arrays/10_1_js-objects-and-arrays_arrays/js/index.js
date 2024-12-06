@@ -15,13 +15,13 @@ nestedArray.push(["nestedExample", 2, true]);
 // Change the value of `firstNumber` to equal the first value in the `numbers` array using bracket notation.
 
 const numbers = [20, 10, 50];
-
 const firstNumber = numbers[0];
 
 // EXERCISE 4
 // Update the first fruit in `fruits` to be "mango" instead of "apple".
 
 const fruits = ["apple", "banana", "grapefruit"];
+fruits[0] = "mango";
 
 // EXERCISE 5
 // Set the value of `nestedNumber` to the fourth number in the `nestedNumbers` array using bracket notation.
