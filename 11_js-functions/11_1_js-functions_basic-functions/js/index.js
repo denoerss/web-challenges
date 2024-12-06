@@ -9,10 +9,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-const bookTitle = "What is Media Archaeology?";
-const bookAuthor = "Jussi Parikka";
-const bookRating = 4.2;
-const bookCopiesSold = 657843;
+const title = "What is Media Archaeology?";
+const author = "Jussi Parikka";
+let rating = 4.2;
+let copiesSold = 2545;
 // --^-- write your code here --^--
 
 /*
@@ -30,7 +30,30 @@ Then:
 */
 
 // --v-- write your code here --v--
+console.log(
+  "TITLE:",
+  title,
+  "/ AUTHOR:",
+  author,
+  "/ Rating:",
+  rating,
+  "/ Copies Sold:",
+  copiesSold
+);
 
+copiesSold += 143;
+rating = 4.3;
+
+console.log(
+  "TITLE:",
+  title,
+  "/ AUTHOR:",
+  author,
+  "/ Rating:",
+  rating,
+  "/ Copies Sold:",
+  copiesSold
+);
 // --^-- write your code here --^--
 
 /*
