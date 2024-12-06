@@ -65,7 +65,7 @@ const ageOfThirdPerson = people[2].age;
 // EXERCISE 4
 // Set the variable `mothersNameOfSecondPerson` to the mother's name of the second person.
 
-const mothersNameOfSecondPerson = "change me";
+const mothersNameOfSecondPerson = people[1].parents.mothersName;
 
 // EXERCISE 5
 // Set the variable `animalTypeOfLisasPet` to the type of animal that Lisa has as a pet.
