@@ -9,7 +9,10 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const bookTitle = "What is Media Archaeology?";
+const bookAuthor = "Jussi Parikka";
+const bookRating = 4.2;
+const bookCopiesSold = 657843;
 // --^-- write your code here --^--
 
 /*
