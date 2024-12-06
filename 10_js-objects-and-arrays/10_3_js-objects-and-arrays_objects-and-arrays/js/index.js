@@ -55,7 +55,7 @@ const nameOfFirstPerson = people[0].name;
 // EXERCISE 2
 // Set the variable `homersOtherFriends` to the other friends of Homer.
 
-const homersOtherFriends = "change me";
+const homersOtherFriends = people[0]["other friends"];
 
 // EXERCISE 3
 // Set the variable `ageOfThirdPerson` to the age of the third person.
