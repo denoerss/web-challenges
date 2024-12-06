@@ -37,14 +37,16 @@ greetBob();
 greetMary();
 
 // --v-- write your code here --v--
-function greet() {
-  const name = "Alice";
-  console.log("");
-  console.log("FUNCTION-LOG:");
+console.log("");
+console.log("FUNCTION-LOGS:");
+
+function greet(name) {
   console.log("Welcome " + name + ", good to see you again!");
 }
 
-greet();
+greet("Alice");
+greet("Bob");
+greet("Mary");
 // --^-- write your code here --^--
 
 logSeperator(3);
