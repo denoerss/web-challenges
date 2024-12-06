@@ -39,6 +39,7 @@ petsWithPush.push("rat");
 // Use the `.pop()` method to remove the last item from `fruitsWithPop`.
 
 const fruitsWithPop = ["apple", "banana", "mango"];
+fruitsWithPop.pop();
 
 // EXERCISE 8
 // Use the `.unshift()` array method to add "hamster" to the beginning of `unshiftedPets`.
