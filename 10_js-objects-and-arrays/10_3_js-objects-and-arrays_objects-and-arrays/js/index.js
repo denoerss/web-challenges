@@ -60,7 +60,7 @@ const homersOtherFriends = people[0]["other friends"];
 // EXERCISE 3
 // Set the variable `ageOfThirdPerson` to the age of the third person.
 
-const ageOfThirdPerson = "change me";
+const ageOfThirdPerson = people[2].age;
 
 // EXERCISE 4
 // Set the variable `mothersNameOfSecondPerson` to the mother's name of the second person.
