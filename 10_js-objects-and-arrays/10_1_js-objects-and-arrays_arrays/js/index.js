@@ -3,7 +3,7 @@ console.clear();
 // EXERCISE 1
 // Modify the array `exampleArray` so that it contains a number and a string.
 
-const exampleArray = [true];
+const exampleArray = ["Denise", 32];
 
 // EXERCISE 2
 // Nest an array inside `nestedArray`. After completing this, `nestedArray` should contain an array as one of its elements.
