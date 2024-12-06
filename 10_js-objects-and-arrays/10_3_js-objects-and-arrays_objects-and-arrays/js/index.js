@@ -50,7 +50,7 @@ const people = [
 // EXERCISE 1
 // Set the variable `nameOfFirstPerson` to the name of the first person in the array.
 
-const nameOfFirstPerson = "change me";
+const nameOfFirstPerson = people[0].name;
 
 // EXERCISE 2
 // Set the variable `homersOtherFriends` to the other friends of Homer.
