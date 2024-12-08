@@ -40,6 +40,16 @@ function getGreeting() {
 
 function getDayColor() {
   // Code here
+
+  const currentDay = new Date().getDay();
+
+  if (currentDay === 1) {
+    return "darkgray";
+  } else if (currentDay >= 2 && currentDay <= 5) {
+    return "lightblue";
+  } else {
+    return "hotpink";
+  }
 }
 
 display.textContent = getGreeting();
