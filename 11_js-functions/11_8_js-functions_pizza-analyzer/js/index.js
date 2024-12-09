@@ -8,19 +8,19 @@ const outputSection = document.querySelector('[data-js="output-section"]');
 
 const output = document.querySelector('[data-js="output"]');
 
-let pizzaSize1 = 12;
-let pizzaSize2 = 24;
+const pizzaSize1 = 12;
+const pizzaSize2 = 24;
 
 pizzaInput1.addEventListener("input", () => {
   // 1.5 save current values of both pizza inputs in two variables
-  const pizzaSize1 = pizzaInput1.value;
+  const pizzaSize1 = parseFloat(pizzaInput1.value); // converts the input string to a number
   // 2.4 call function updatePizzaDisplay
   updatePizzaDisplay(pizza1, pizzaSize1);
 });
 
 pizzaInput2.addEventListener("input", () => {
   // 1.5 save current values of both pizza inputs in two variables
-  const pizzaSize2 = pizzaInput2.value;
+  const pizzaSize2 = parseFloat(pizzaInput2.value);
   // 2.4 call function updatePizzaDisplay
   updatePizzaDisplay(pizza2, pizzaSize2);
 });
@@ -38,7 +38,7 @@ function calculatePizzaGain(diameter1, diameter2) {
   const pizzaGain = ((area2 - area1) / area1) * 100;
   // 1.4 round pizza gain & set textContet to roundedPizzaGain
   const roundedPizzaGain = Math.round(pizzaGain);
-  output.textContent = `${roundedPizzaGain}%`;
+  output.textContent = `${roundedPizzaGain}`;
 }
 
 // 1.6 call function
