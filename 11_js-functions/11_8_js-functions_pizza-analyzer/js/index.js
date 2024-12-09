@@ -27,8 +27,14 @@ function calculatePizzaGain(diameter1, diameter2) {
   const area1 = Math.PI * Math.pow(radius1, 2);
   const area2 = Math.PI * Math.pow(radius2, 2);
 
-  // calculate the gain in area
-  const areaGain = area2 - area1;
+  // calculate the pizza gain in percent
+  const pizzaGain = ((area2 - area1) / area1) * 100;
+
+  // round pizza gain / set output
+  const roundedPizzaGain = Math.round(pizzaGain);
+
+  // Output result to specified element
+  output.textContent = `${roundedPizzaGain}%`;
 }
 
 // Task 2
