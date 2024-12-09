@@ -41,7 +41,12 @@ calculatePizzaGain(pizzaSize1, pizzaSize2);
 
 // Task 2
 // 2.1 define the function updatePizzaDisplay here
-function updatePizzaDisplay(pizzaElement, newSize) {}
+function updatePizzaDisplay(pizzaElement, newSize) {
+  // 2.2 calculate newDisplaySize
+  const newDisplaySize = (newSize / 24) * 100;
+  // 2.3 set width of pizzaElement to newDisplaySize
+  pizzaElement.style.width = `${newDisplaySize}px`;
+}
 
 // Task 3
 // define the function updateOutputColor here
