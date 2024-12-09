@@ -9,11 +9,15 @@ const outputSection = document.querySelector('[data-js="output-section"]');
 const output = document.querySelector('[data-js="output"]');
 
 pizzaInput1.addEventListener("input", () => {
-  // write your code here
+  // 1.5 save current values of both pizza inputs in two variables
+  const pizzaSize1 = pizzaInput1.value;
+  const pizzaSize2 = pizzaInput2.value;
 });
 
 pizzaInput2.addEventListener("input", () => {
-  // write your code here
+  // 1.5 save current values of both pizza inputs in two variables
+  const pizzaSize1 = pizzaInput1.value;
+  const pizzaSize2 = pizzaInput2.value;
 });
 
 // Task 1
