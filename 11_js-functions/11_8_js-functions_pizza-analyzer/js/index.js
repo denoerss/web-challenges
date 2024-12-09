@@ -40,7 +40,8 @@ function calculatePizzaGain(diameter1, diameter2) {
 calculatePizzaGain(pizzaSize1, pizzaSize2);
 
 // Task 2
-// define the function updatePizzaDisplay here
+// 2.1 define the function updatePizzaDisplay here
+function updatePizzaDisplay(pizzaElement, newSize) {}
 
 // Task 3
 // define the function updateOutputColor here
