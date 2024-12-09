@@ -36,6 +36,9 @@ function calculatePizzaGain(diameter1, diameter2) {
   output.textContent = `${roundedPizzaGain}%`;
 }
 
+// 1.6 call function
+calculatePizzaGain(pizzaSize1, pizzaSize2);
+
 // Task 2
 // define the function updatePizzaDisplay here
 
