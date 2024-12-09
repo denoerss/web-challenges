@@ -11,10 +11,13 @@ inputColor.addEventListener("input", () => {
   box.style.backgroundColor = hslColor;
 });
 
-inputRadius.addEventListener("click", () => {
+inputRadius.addEventListener("input", () => {
   const radiusValue = inputRadius.value;
   box.style.borderRadius =
     radiusValue === inputRadius.max ? "50%" : `${radiusValue}px`;
 });
 
-inputRotation.addEventListener("click", () => {});
+inputRotation.addEventListener("input", () => {
+  const rotationValue = inputRotation.value;
+  box.style.transform = `rotate(${rotationValue}deg)`;
+});
