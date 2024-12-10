@@ -34,8 +34,8 @@ form.addEventListener("submit", (event) => {
   console.log("USER_DATA_V1_(LONG_WAY)_", userDataV1);
 
   // BUNUS
-  const ageBadnessSum = userDataV1.age + userDataV1.badness;
-  console.log(parseFloat(ageBadnessSum));
+  const ageBadnessSum = Number(userDataV1.age) + Number(userDataV1.badness);
+  console.log(ageBadnessSum);
 
   // V2 / SHORT WAY
 
