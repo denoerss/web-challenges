@@ -40,4 +40,8 @@ form.addEventListener("submit", (event) => {
   // List User Input
   const userDataV2 = Object.fromEntries(formData);
   console.log("USER_DATA_V2_(SHORT_WAY)_", userDataV2);
+
+  // RESET FORM
+  event.target.reset();
+  formElements.firstName.focus();
 });
