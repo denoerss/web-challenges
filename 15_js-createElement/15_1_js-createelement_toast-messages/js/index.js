@@ -10,8 +10,13 @@ addButton.addEventListener("click", () => {
   newEntry.classList.add("toast-container__message");
   newEntry.textContent = "I'm a new toast message.";
   toastContainer.append(newEntry);
+
+  console.log("addButton works!");
 });
 
 clearButton.addEventListener("click", () => {
   // Exercise: Clear the stack of toast messages
+  toastContainer.innerHTML = "";
+
+  console.log("clearButton works!");
 });
