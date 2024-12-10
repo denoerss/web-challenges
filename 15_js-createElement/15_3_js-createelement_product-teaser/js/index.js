@@ -10,9 +10,13 @@ const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
-const teaserContainer = document.querySelector(".product");
+// const teaserContainer = document.querySelector(".product");
 
-teaserContainer.innerHTML = `
+const secondTeaser = document.createElement("article");
+secondTeaser.classList.add("product");
+document.body.append(secondTeaser);
+
+secondTeaser.innerHTML = `
 <div class="product__body">
         <div class="product__text-container">
           <h2 class="product__name">${name}</h2>
