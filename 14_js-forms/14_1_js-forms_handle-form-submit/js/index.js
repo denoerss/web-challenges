@@ -33,6 +33,10 @@ form.addEventListener("submit", (event) => {
   // V1.3 / Log User Input
   console.log("USER_DATA_V1_(LONG_WAY)_", userDataV1);
 
+  // BUNUS
+  const ageBadnessSum = userDataV1.age + userDataV1.badness;
+  console.log(parseFloat(ageBadnessSum));
+
   // V2 / SHORT WAY
 
   // List From Data
