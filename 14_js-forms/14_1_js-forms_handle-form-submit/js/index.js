@@ -29,5 +29,12 @@ form.addEventListener("submit", (event) => {
     tos: formElements.tos.value,
   };
   // V1.3 / Log User Input
-  console.log("V1_LONG_", userDataV1);
+  console.log("USER_DATA_V1_(LONG_WAY)_", userDataV1);
+
+  // V2 / SHORT WAY
+  // List all Input Values
+  const formData = new FormData(event.target);
+  // console.log("FORM_DATA_", formData);
+  const userDataV2 = Object.fromEntries(formData);
+  console.log("USER_DATA_V2_(SHORT_WAY)_", userDataV2);
 });
