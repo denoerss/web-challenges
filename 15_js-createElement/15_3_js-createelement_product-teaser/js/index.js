@@ -12,4 +12,25 @@ const imageSrc =
 
 const teaserContainer = document.querySelector(".product");
 
+teaserContainer.innerHTML = `
+<div class="product__body">
+        <div class="product__text-container">
+          <h2 class="product__name">${name}</h2>
+          <ul class="product__categories">
+            <li class="product__category">${category1}</li>
+            <li class="product__category">${category2}</li>
+            <li class="product__category">${category3}</li>
+          </ul>
+          <p class="product__description">${description}</p>
+        </div>
+        <div class="product__image-container">
+          <img class="product__image" src=${imageSrc}; alt=""/>
+        </div>
+      </div>
+      <footer class="product__footer">
+        <span class="product__price">${price}</span>
+        <button type="button" class="product__buy-button">Buy</button>
+      </footer>
+`;
+
 console.log(teaserContainer);
