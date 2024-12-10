@@ -37,4 +37,4 @@ secondTeaser.innerHTML = `
       </footer>
 `;
 
-console.log(teaserContainer);
+console.log(secondTeaser);
