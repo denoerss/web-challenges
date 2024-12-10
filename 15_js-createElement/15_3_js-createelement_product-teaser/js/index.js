@@ -10,7 +10,7 @@ const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
 
-// const teaserContainer = document.querySelector(".product");
+// CREATE SECOND PRODUCT TEASER
 
 const secondTeaser = document.createElement("article");
 secondTeaser.classList.add("product");
@@ -38,3 +38,12 @@ secondTeaser.innerHTML = `
 `;
 
 console.log(secondTeaser);
+
+// ADD EVENT LISTENER TO BUY BUTTON
+
+const buyButton = secondTeaser.querySelector(".product__buy-button");
+buyButton.addEventListener("click", () => {
+  console.log(`
+    Product Name: ${name}
+    Product Price: ${price}`);
+});
