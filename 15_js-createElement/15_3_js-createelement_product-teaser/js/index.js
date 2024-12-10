@@ -9,3 +9,7 @@ const category3 = "Plankton Diet";
 const price = "149,99 €";
 const imageSrc =
   "https://unsplash.com/photos/3VOTHTrE614/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU5NTM3NTA2&force=true&w=640";
+
+const teaserContainer = document.querySelector(".product");
+
+console.log(teaserContainer);
