@@ -28,7 +28,9 @@ const onlyCardWithIdTwo = cards.filter((card) => {
   return card.id.includes(2);
 });
 
-const allCardsWith3Tags = null;
+const allCardsWith3Tags = cards.filter((card) => {
+  return card.tags.length === 3;
+});
 
 const allCardsThatAreNotBookmarked = null;
 
@@ -42,3 +44,4 @@ export {
 };
 
 console.log(onlyCardWithIdTwo);
+console.log(allCardsWith3Tags);
