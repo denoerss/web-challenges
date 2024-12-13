@@ -36,7 +36,12 @@ const allCardsThatAreNotBookmarked = cards.filter((card) => {
   return card.isBookmarked === false;
 });
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
+  const hasRelevantTags =
+    card.tags.includes("html") || card.tags.includes("js");
+  const isBookmarked = card.isBookmarked;
+  return hasRelevantTags && isBookmarked;
+});
 
 export {
   onlyCardWithIdTwo,
@@ -45,6 +50,13 @@ export {
   allCardsWithTagsHTMLOrJSThatAreBookmarked,
 };
 
-console.log(onlyCardWithIdTwo);
-console.log(allCardsWith3Tags);
-console.log(allCardsThatAreNotBookmarked);
+console.log("ONLY CARD WITH ID 2: ", onlyCardWithIdTwo);
+console.log("ALL CARDS WITH 3 TAGS: ", allCardsWith3Tags);
+console.log(
+  "ALL CARDS THAT ARE NOT BOOKMARKED: ",
+  allCardsThatAreNotBookmarked
+);
+console.log(
+  "ALL CARDS WITH TAGS HTML OR JS THAT ARE BOOKMARKED: ",
+  allCardsWithTagsHTMLOrJSThatAreBookmarked
+);
