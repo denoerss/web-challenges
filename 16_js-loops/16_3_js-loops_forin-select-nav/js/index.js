@@ -21,9 +21,9 @@ select.name = "languages";
 main.append(select);
 
 // --v-- write or modify code below this line --v--
-for (const language in languages) {
+for (const key in languages) {
   const option = document.createElement("option");
-  option.textContent = languages[language];
+  option.textContent = languages[key];
   select.append(option);
 }
 // --^-- write or modify code above this line --^--
@@ -42,5 +42,8 @@ main.append(navElement);
 navElement.append(ul);
 
 // --v-- write or modify code below this line --v--
-
+for (const key in nav) {
+  const li = document.createElement("li");
+  const anchor = document.createElement("a");
+}
 // --^-- write or modify code above this line --^--
