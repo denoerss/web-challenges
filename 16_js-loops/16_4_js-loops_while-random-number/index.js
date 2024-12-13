@@ -5,8 +5,7 @@ let count = 0;
 
 // --v-- write or modify code below this line --v--
 while (number <= 0.9) {
-  number = number++;
-  Math.random(number);
+  count++;
   console.log(number);
 }
 // --^-- write or modify code above this line --^--
