@@ -32,7 +32,9 @@ const allCardsWith3Tags = cards.filter((card) => {
   return card.tags.length === 3;
 });
 
-const allCardsThatAreNotBookmarked = null;
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  return card.isBookmarked === false;
+});
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = null;
 
@@ -45,3 +47,4 @@ export {
 
 console.log(onlyCardWithIdTwo);
 console.log(allCardsWith3Tags);
+console.log(allCardsThatAreNotBookmarked);
