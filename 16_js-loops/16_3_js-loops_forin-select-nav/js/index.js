@@ -45,5 +45,9 @@ navElement.append(ul);
 for (const key in nav) {
   const li = document.createElement("li");
   const anchor = document.createElement("a");
+
+  const hrefAnchor = (anchor.href = nav[key].href);
+  const textAnchor = (anchor.textContent = nav[key].text);
+  console.log("HREF_", hrefAnchor, "TEXT_", textAnchor);
 }
 // --^-- write or modify code above this line --^--
