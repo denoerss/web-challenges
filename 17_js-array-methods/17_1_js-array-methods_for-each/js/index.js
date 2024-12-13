@@ -26,3 +26,13 @@ colors.forEach((hexCode) => {
   colorBox.style.backgroundColor = hexCode;
   document.body.append(colorBox);
 });
+
+// TASK 2
+function renderColorBox(hexCode) {
+  const colorBox = document.createElement("div");
+  colorBox.classList.add("color-box");
+  colorBox.style.backgroundColor = hexCode;
+  document.body.append(colorBox);
+}
+
+colors.forEach(renderColorBox);
