@@ -15,6 +15,9 @@ function renderStars() {
 
     starContainer.appendChild(starEmpty);
   }
+
+  // PART 2: CHANGE THE NUMBER OF FILLED STARS
+
   // --^-- write or modify code above this line --^--
 }
 
