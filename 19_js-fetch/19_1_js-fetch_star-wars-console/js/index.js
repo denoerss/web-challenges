@@ -8,6 +8,18 @@ async function fetchData() {
 
   // log entire data object
   console.log("ENTIRE DATA OBJECT_", data);
+
+  // log different values of data object
+  data.results.forEach((character) =>
+    console.log(
+      "CHARACTER NAME_",
+      character.name,
+      "HEIGHT_",
+      character.height,
+      "MASS_",
+      character.mass
+    )
+  );
 }
 
 fetchData();
