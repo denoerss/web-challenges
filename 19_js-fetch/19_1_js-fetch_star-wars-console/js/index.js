@@ -20,6 +20,13 @@ async function fetchData() {
       character.mass
     )
   );
+
+  // BONUS: log eye color of R2-D2
+  const R2D2 = data.results.find((character) => {
+    return character.name === "R2-D2";
+  });
+
+  console.log("R2-D2 EYECOLOR_", R2D2["eye_color"]);
 }
 
 fetchData();
