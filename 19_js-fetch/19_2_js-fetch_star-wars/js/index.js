@@ -45,4 +45,9 @@ async function fetchDataAndRender() {
   const response = await fetch("https://swapi.py4e.com/api/people");
   const data = await response.json();
   console.log("DATA_", data);
+
+  data.results.forEach((character) => {
+    const newCard = Card(character);
+    renderElement(newCard);
+  });
 }
