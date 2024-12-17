@@ -8,6 +8,10 @@ async function fetchUserData(url) {
   try {
     const response = await fetch(url);
 
+    if (!response.ok) {
+      throw new Error(`${endpoints[2].name} not found (${response.status}).`);
+    }
+
     return await response.json();
   } catch (error) {
     return { error: error.message };
