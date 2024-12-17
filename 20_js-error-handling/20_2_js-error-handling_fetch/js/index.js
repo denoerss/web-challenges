@@ -7,6 +7,17 @@ const errorElement = document.querySelector("[data-js='error']");
 async function fetchUserData(url) {
   try {
     const response = await fetch(url);
+    const contentType = response.headers.get("content-type");
+
+    if (!contentType.includes("json")) {
+      throw new Error(
+        `Unexpected Content-Type: Received "${contentType}" instead of "json".`
+      );
+    }
+
+    if (response.status === 404) {
+      throw new Error(`${endpoints[2].name} not found (${response.status}).`);
+    }
 
     return await response.json();
   } catch (error) {
