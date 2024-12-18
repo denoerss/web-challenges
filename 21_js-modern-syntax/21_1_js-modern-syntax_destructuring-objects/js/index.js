@@ -12,6 +12,9 @@ const company = {
   location: "Hamburg",
 };
 
+export const { course } = company;
+console.log("COURSE_", "Name:", course);
+
 // Example: export const { value1 } = myObject;
 
 /*
@@ -26,6 +29,9 @@ Use destructuring to extract the following:
 
 const user = { name: "John", years: 30 };
 
+export const { name: name, years: age, isAdmin: isAdmin = false } = user;
+console.log("USER_", "Name:", name, "/ Age:", age, "/ is Admin:", isAdmin);
+
 /*
 EXERCISE 3
 Extract properties from the dog object and
@@ -38,6 +44,9 @@ const dog = {
   age: 5,
 };
 
+export const { name: dogName, breed: dogBreed, age: dogAge } = dog;
+console.log("DOG_", "Name:", dogName, "/ Breed:", dogBreed, "/ Age:", dogAge);
+
 /*
 EXERCISE 4
 Extract the `lastName` property from the `person` object as `personLastName`.
@@ -49,6 +58,15 @@ const person = {
   age: 24,
   firstName: "Alex",
 };
+
+export const { lastName: personLastName, ...moreInformation } = person;
+console.log(
+  "PERSON_",
+  "Last Name:",
+  personLastName,
+  "/ More Information:",
+  moreInformation
+);
 
 /*
 EXERCISE 5
@@ -65,11 +83,8 @@ export function logInfo(city) {
   return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
 }
 
-<<<<<<< HEAD
-// This is how you call it:
-=======
-// Usage example:
->>>>>>> main
 console.log(
+  "CITY_",
+  "Info:",
   logInfo({ name: "Marseille", country: "France", population: 861635 })
 );
