@@ -59,6 +59,15 @@ const person = {
   firstName: "Alex",
 };
 
+export const { lastName: personLastName, ...moreInformation } = person;
+console.log(
+  "PERSON_",
+  "Last Name:",
+  personLastName,
+  "/ More Information:",
+  moreInformation
+);
+
 /*
 EXERCISE 5
 Refactor the following function to use destructuring assignment for the
