@@ -12,6 +12,9 @@ const company = {
   location: "Hamburg",
 };
 
+export const { course } = company;
+console.log(course);
+
 // Example: export const { value1 } = myObject;
 
 /*
@@ -65,11 +68,11 @@ export function logInfo(city) {
   return `${name} is in ${country} and has ${numPeople} inhabitants in it.`;
 }
 
-<<<<<<< HEAD
-// This is how you call it:
-=======
-// Usage example:
->>>>>>> main
-console.log(
-  logInfo({ name: "Marseille", country: "France", population: 861635 })
-);
+// <<<<<<< HEAD
+// // This is how you call it:
+// =======
+// // Usage example:
+// >>>>>>> main
+// console.log(
+//   logInfo({ name: "Marseille", country: "France", population: 861635 })
+// );
