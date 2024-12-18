@@ -29,8 +29,8 @@ Use destructuring to extract the following:
 
 const user = { name: "John", years: 30 };
 
-const { name: name, years: age, isAdmin: isAdmin = false } = user;
-console.log("USER_", "name:", name, "age:", age, "is Admin:", isAdmin);
+export const { name: name, years: age, isAdmin: isAdmin = false } = user;
+console.log("USER_", "Name:", name, "/ Age:", age, "/ is Admin:", isAdmin);
 
 /*
 EXERCISE 3
@@ -43,6 +43,9 @@ const dog = {
   breed: "husky",
   age: 5,
 };
+
+export const { name: dogName, breed: dogBreed, age: dogAge } = dog;
+console.log("DOG_", "Name:", dogName, "/ Breed:", dogBreed, "/ Age:", dogAge);
 
 /*
 EXERCISE 4
