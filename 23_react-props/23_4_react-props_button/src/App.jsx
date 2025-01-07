@@ -3,7 +3,14 @@ import "./styles.css";
 
 export default function App() {
   return (
-    <div style={{ display: "flex", textAlign: "center" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <Button
         disabled
         color="red"
