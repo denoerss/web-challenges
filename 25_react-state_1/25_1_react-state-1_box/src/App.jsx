@@ -13,7 +13,9 @@ export default function App() {
   return (
     <main>
       <div className={`box ${active ? "box--active" : ""}`} />
-      <button onClick={handleClick}>Activate</button>
+      <button onClick={handleClick}>
+        {active ? "Deactivate" : "Activate"}
+      </button>
     </main>
   );
 }
