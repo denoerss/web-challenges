@@ -5,13 +5,13 @@ import { useState } from "react";
 
 export default function FavoriteButton() {
   // This should be a state variable.
-  const [isFavorite, setIsFavourite] = useState(false);
+  const [isFavorite, setIsFavorite] = useState(false);
 
   return (
     <button
       className="favorite-button"
       onClick={() => {
-        setIsFavourite(!isFavorite);
+        setIsFavorite(!isFavorite);
       }}
       aria-label="favorite"
     >
