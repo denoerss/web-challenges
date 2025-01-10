@@ -11,18 +11,27 @@ export default function App() {
     latitude: 0,
   });
 
+  // in this case: defining fetch-function outside useEffect!
+  // to make it reusable for useEffect AND for refresh-button
+
+  // HOW to fatch data?
+  async function getISSCoords() {
+    const response = await fetch(URL);
+    const fetchedCoords = await response.json();
+
+    setCoords({
+      longitude: fetchedCoords.longitude,
+      latitude: fetchedCoords.latitude,
+    });
+  }
+
+  // WHEN to fetch data?
   useEffect(() => {
-    async function getISSCoords() {
-      const response = await fetch(URL);
-      const fetchedCoords = await response.json();
+    const updateCoordinates = setInterval(getISSCoords, 5000);
 
-      setCoords({
-        longitude: fetchedCoords.longitude,
-        latitude: fetchedCoords.latitude,
-      });
-    }
-
-    getISSCoords();
+    return () => {
+      clearInterval(updateCoordinates);
+    };
   }, []);
 
   return (
@@ -31,7 +40,7 @@ export default function App() {
       <Controls
         longitude={coords.longitude}
         latitude={coords.latitude}
-        // onRefresh={getISSCoords}
+        onRefresh={getISSCoords}
       />
     </main>
   );
