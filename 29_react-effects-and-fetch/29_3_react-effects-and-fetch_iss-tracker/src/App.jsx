@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Controls from "./components/Controls";
 import Map from "./components/Map";
 import "./styles.css";
@@ -11,7 +11,28 @@ export default function App() {
     latitude: 0,
   });
 
-  async function getISSCoords() {}
+  // in this case: defining fetch-function outside useEffect!
+  // to make it reusable for useEffect AND for refresh-button
+
+  // HOW to fatch data?
+  async function getISSCoords() {
+    const response = await fetch(URL);
+    const fetchedCoords = await response.json();
+
+    setCoords({
+      longitude: fetchedCoords.longitude,
+      latitude: fetchedCoords.latitude,
+    });
+  }
+
+  // WHEN to fetch data?
+  useEffect(() => {
+    const updateCoordinates = setInterval(getISSCoords, 5000);
+
+    return () => {
+      clearInterval(updateCoordinates);
+    };
+  }, []);
 
   return (
     <main>
