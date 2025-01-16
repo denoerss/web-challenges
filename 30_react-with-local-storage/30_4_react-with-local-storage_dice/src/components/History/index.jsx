@@ -2,12 +2,12 @@ import "./History.css";
 
 const MAX_ROLLS = 20;
 
-export default function History({ rolls }) {
+export default function History({ rounds }) {
   return (
     <>
-      {rolls.length ? <h2>History</h2> : <h2>Click the die to roll…</h2>}
+      {rounds.length ? <h2>History</h2> : <h2>Click the die to roll…</h2>}
       <ul className="history">
-        {rolls.slice(0, MAX_ROLLS).map(({ time, value }, index) => (
+        {rounds.slice(0, MAX_ROLLS).map(({ time, value }, index) => (
           <li
             key={time}
             className="history__entry"
