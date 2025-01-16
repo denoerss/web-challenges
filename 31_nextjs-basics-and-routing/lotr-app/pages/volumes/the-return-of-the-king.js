@@ -2,7 +2,9 @@ import { volumes } from "@/resources/lib/data";
 import Link from "next/link";
 
 export default function TheReturnOfTheKing() {
+  const prevVolume = volumes[1];
   const currentVolume = volumes[2];
+
   return (
     <>
       <Link href="/volumes">← All Volumes</Link>
@@ -17,6 +19,11 @@ export default function TheReturnOfTheKing() {
           </li>
         ))}
       </ul>
+
+      {/* TO-DO: Implement conditional rendering */}
+      <div className="navigation">
+        <Link href={`/volumes/${prevVolume.slug}`}>← {prevVolume.title}</Link>
+      </div>
     </>
   );
 }
