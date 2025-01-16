@@ -10,15 +10,11 @@ export default function Volumes() {
       <p>{introduction}</p>
       <h2>All volumes</h2>
       <ul>
-        <li>
-          <Link href={`/volumes/${volumes[0].slug}`}>{volumes[0].title}</Link>
-        </li>
-        <li>
-          <Link href={`/volumes/${volumes[1].slug}`}>{volumes[1].title}</Link>
-        </li>
-        <li>
-          <Link href={`/volumes/${volumes[2].slug}`}>{volumes[2].title}</Link>
-        </li>
+        {volumes.map((volume) => (
+          <li key={volume.slug}>
+            <Link href={`/volumes/${volume.slug}`}>{volume.title}</Link>
+          </li>
+        ))}
       </ul>
     </>
   );
