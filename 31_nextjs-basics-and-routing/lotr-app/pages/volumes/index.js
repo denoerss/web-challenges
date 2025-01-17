@@ -1,21 +1,41 @@
 import { introduction, volumes } from "@/resources/lib/data.js";
+
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Volumes() {
-  console.log("VOLUMES_", volumes);
-
   return (
     <>
-      <h1>Lord of the Rings</h1>
-      <p>{introduction}</p>
-      <h2>All volumes</h2>
-      <ul>
-        {volumes.map((volume) => (
-          <li key={volume.slug}>
-            <Link href={`/volumes/${volume.slug}`}>{volume.title}</Link>
-          </li>
-        ))}
-      </ul>
+      <Head>
+        <title>Lord of the Rings</title>
+      </Head>
+
+      <section className="nav-bar">
+        <Link href="/" className="nav-link">
+          ← Home
+        </Link>
+      </section>
+
+      <section className="movie">
+        <h1 className="movie__title">Lord of the Rings</h1>
+        <p className="movie__intro">{introduction}</p>
+
+        <section className="volumes">
+          <h2>All volumes</h2>
+          <ul className="volumes__list">
+            {volumes.map((volume) => (
+              <li key={volume.slug}>
+                <Link
+                  href={`/volumes/${volume.slug}`}
+                  className="volumes__link"
+                >
+                  {volume.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </section>
     </>
   );
 }
