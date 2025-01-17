@@ -7,28 +7,25 @@ import Image from "next/image";
 
 export default function Volumes() {
   const router = useRouter();
-  const { index, slug } = router.query;
+  const { slug } = router.query;
 
   if (!slug) {
     return <p>Loading...</p>;
   }
 
-  // find current volume index
   const currentVolumeIndex = volumes.findIndex(
     (volume) => volume.slug === slug
   );
 
-  // volume not found?
   if (currentVolumeIndex === -1) {
     return (
       <>
-        <h1>Volume Not Found</h1>
         <Link href="/volumes">← All Volumes</Link>
+        <h1>Volume Not Found</h1>
       </>
     );
   }
 
-  // get current, prev and next volumes
   const currentVolume = volumes[currentVolumeIndex];
   const prevVolume =
     currentVolumeIndex > 0 ? volumes[currentVolumeIndex - 1] : null;
@@ -42,30 +39,53 @@ export default function Volumes() {
       <Head>
         <title>{currentVolume.title}</title>
       </Head>
-      <Link href="/volumes">← All Volumes</Link>
-      <h1>{currentVolume.title}</h1>
-      <p>{currentVolume.description}</p>
-      <ul>
-        {currentVolume.books.map((book, index) => (
-          <li key={index}>
-            {book.ordinal}: {book.title}
-          </li>
-        ))}
-      </ul>
-      <Image
-        alt={currentVolume.title}
-        src={`/resources${currentVolume.cover}`}
-        width={140}
-        height={230}
-      />
-      <br /> <br />
-      {prevVolume && (
-        <Link href={`/volumes/${prevVolume.slug}`}>← {prevVolume.title}</Link>
-      )}
-      {prevVolume && nextVolume && " | "}
-      {nextVolume && (
-        <Link href={`/volumes/${nextVolume.slug}`}>{nextVolume.title} →</Link>
-      )}
+
+      <section className="nav-bar">
+        <Link href="/" className="nav-link">
+          ← Home
+        </Link>
+        {" | "}
+        <Link href="/volumes" className="nav-link">
+          ← All Volumes
+        </Link>
+      </section>
+
+      <section className="volume">
+        <h1 className="volume__title">{currentVolume.title}</h1>
+        <p className="volume__description">{currentVolume.description}</p>
+
+        <ul className="book-list">
+          {currentVolume.books.map((book, index) => (
+            <li key={index} className="book-list__title">
+              {book.ordinal}: {book.title}
+            </li>
+          ))}
+        </ul>
+
+        <Image
+          className="book-cover"
+          alt={currentVolume.title}
+          src={`/resources${currentVolume.cover}`}
+          width={140}
+          height={230}
+        />
+      </section>
+
+      <br />
+
+      <div className="nav-bar">
+        {prevVolume && (
+          <Link href={`/volumes/${prevVolume.slug}`} className="nav-link">
+            ← {prevVolume.title}
+          </Link>
+        )}
+        {prevVolume && nextVolume && " | "}
+        {nextVolume && (
+          <Link href={`/volumes/${nextVolume.slug}`} className="nav-link">
+            {nextVolume.title} →
+          </Link>
+        )}
+      </div>
     </>
   );
 }

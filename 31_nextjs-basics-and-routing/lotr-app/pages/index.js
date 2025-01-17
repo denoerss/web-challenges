@@ -9,14 +9,17 @@ export default function HomePage() {
       <Head>
         <title>Movie List</title>
       </Head>
-      <div>
+
+      <section className="movie">
         <h1>Movie List</h1>
-        <ul>
-          <li key={volumes.id}>
-            <Link href="/volumes">Lord of the Rings</Link>
+        <ul className="movie-list">
+          <li key={volumes.id} className="movie-list__title">
+            <Link href="/volumes" className="movie-list__link">
+              Lord of the Rings
+            </Link>
           </li>
         </ul>
-      </div>
+      </section>
     </>
   );
 }
