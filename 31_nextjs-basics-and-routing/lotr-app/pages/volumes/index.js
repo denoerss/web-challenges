@@ -3,7 +3,7 @@ import { introduction, volumes } from "@/resources/lib/data.js";
 import Head from "next/head";
 import Link from "next/link";
 
-export default function Volumes() {
+export default function Volumes(bla) {
   return (
     <>
       <Head>
@@ -22,7 +22,7 @@ export default function Volumes() {
 
         <section className="volumes">
           <h2>All volumes</h2>
-          <ul className="volumes__list">
+          <ol className="volumes__list">
             {volumes.map((volume) => (
               <li key={volume.slug}>
                 <Link
@@ -33,7 +33,7 @@ export default function Volumes() {
                 </Link>
               </li>
             ))}
-          </ul>
+          </ol>
         </section>
       </section>
     </>
