@@ -14,7 +14,11 @@ const fetcher = async (...args) => {
 };
 
 export default function ISSTracker() {
-  const { data: coords, isLoading, error } = useSWR(URL, fetcher);
+  const {
+    data: coords,
+    isLoading,
+    error,
+  } = useSWR(URL, fetcher, { refreshInterval: 5000 });
 
   if (isLoading) return <h2>is loading...</h2>;
   if (error) return <h2>{error.message}</h2>;
