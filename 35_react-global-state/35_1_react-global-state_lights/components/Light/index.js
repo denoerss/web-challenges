@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
 
 export default function Light({ name, onToggle, isOn, id }) {
