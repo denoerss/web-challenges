@@ -17,7 +17,10 @@ export default function ProductPage() {
           <li key={product.id}>
             <h2>{product.name}</h2>
             <p>{product.description}</p>
-            <p>{product.price}</p>
+            <p>
+              {product.price} {product.currency}
+            </p>
+            <category>{product.category}</category>
           </li>
         ))}
       </ul>
