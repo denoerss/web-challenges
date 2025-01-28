@@ -3,10 +3,14 @@ import StyledLink from "@/components/Link";
 import styled from "styled-components";
 
 export default function ProductList() {
-  const { data, isLoading } = useSWR("/api/products");
+  const { data, isLoading, error } = useSWR("/api/products");
 
   if (isLoading) {
     return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Error loading products.</h1>;
   }
 
   if (!data) {
