@@ -1,13 +1,35 @@
 import useSWR from "swr";
+import { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 import StyledLink from "@/components/Link";
+import ProductForm from "@/components/ProductForm";
 
 export default function Product() {
   const router = useRouter();
   const { id } = router.query;
 
-  const { data, isLoading } = useSWR(`/api/products/${id}`);
+  const { data, isLoading, mutate } = useSWR(`/api/products/${id}`);
+
+  const [isEditMode, setIsEditMode] = useState(false);
+
+  async function handleEditProduct(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const productData = Object.fromEntries(formData);
+
+    const response = await fetch(`/api/products/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(productData),
+    });
+
+    if (response.ok) {
+      mutate();
+      setIsEditMode(false);
+    }
+  }
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -24,6 +46,24 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <button
+        type="button"
+        onClick={() => {
+          setIsEditMode(!isEditMode);
+        }}
+      >
+        Edit
+      </button>
+      <div>
+        {isEditMode && (
+          <ProductForm
+            onSubmit={handleEditProduct}
+            isEditMode={true}
+            productData={data}
+          />
+        )}
+      </div>
+
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );

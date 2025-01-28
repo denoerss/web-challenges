@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import StyledButton from "@/components/Button";
 
-export default function ProductForm({ onSubmit, isEditMode }) {
+export default function ProductForm({ onSubmit, isEditMode, productData }) {
   return (
     <StyledForm onSubmit={onSubmit}>
       <StyledHeading>
@@ -9,15 +9,34 @@ export default function ProductForm({ onSubmit, isEditMode }) {
       </StyledHeading>
       <StyledLabel htmlFor="name">
         Name:
-        <input type="text" id="name" name="name" />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          defaultValue={isEditMode ? productData?.name : ""}
+          required
+        />
       </StyledLabel>
       <StyledLabel htmlFor="description">
         Description:
-        <input type="text" id="description" name="description" />
+        <input
+          type="text"
+          id="description"
+          name="description"
+          defaultValue={isEditMode ? productData?.description : ""}
+          required
+        />
       </StyledLabel>
       <StyledLabel htmlFor="price">
         Price:
-        <input type="number" id="price" name="price" min="0" />
+        <input
+          type="number"
+          id="price"
+          name="price"
+          min="0"
+          defaultValue={isEditMode ? productData?.price : null}
+          required
+        />
       </StyledLabel>
       <StyledLabel htmlFor="currency">
         Currency:
