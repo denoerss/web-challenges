@@ -17,7 +17,7 @@ export default function ProductList() {
     <>
       <StyledHeading>Available Fishes</StyledHeading>
       <StyledList>
-        {data.map((product) => (
+        {data.toReversed().map((product) => (
           <li key={product._id}>
             <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
           </li>
