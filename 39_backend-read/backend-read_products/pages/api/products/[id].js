@@ -6,7 +6,8 @@ export default async function handler(request, response) {
   const { id } = request.query;
 
   if (request.method === "GET") {
-    const product = await Product.findById(id);
+    const product = await Product.findById(id).populate("reviews");
+    console.log("PRODUCT_", product);
 
     if (!product) {
       return response.status(404).json({ status: "Not Found" });
