@@ -7,10 +7,15 @@ export default function Product() {
   const router = useRouter();
   const { id } = router.query;
 
-  const { data, isLoading } = useSWR(`/api/products/${id}`);
+  const { data, isLoading, error } = useSWR(`/api/products/${id}`);
+  console.log(data);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>No product found.</h1>;
   }
 
   if (!data) {
@@ -24,6 +29,24 @@ export default function Product() {
       <p>
         Price: {data.price} {data.currency}
       </p>
+      <section>
+        <h3>Reviews:</h3>
+        {data.reviews && data.reviews.length > 0 ? (
+          <ul>
+            {data.reviews.map((review) => (
+              <li key={review._id}>
+                <p>
+                  <strong>{review.title}</strong>
+                </p>
+                <p>{review.text}</p>
+                <p>Rating: {review.rating}/5</p>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p>No reviews available.</p>
+        )}
+      </section>
       <StyledLink href="/">Back to all</StyledLink>
     </ProductCard>
   );

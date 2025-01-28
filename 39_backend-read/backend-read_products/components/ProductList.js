@@ -3,10 +3,14 @@ import StyledLink from "@/components/Link";
 import styled from "styled-components";
 
 export default function ProductList() {
-  const { data, isLoading } = useSWR("/api/products");
+  const { data, isLoading, error } = useSWR("/api/products");
 
   if (isLoading) {
     return <h1>Loading...</h1>;
+  }
+
+  if (error) {
+    return <h1>Error loading products.</h1>;
   }
 
   if (!data) {
@@ -18,8 +22,8 @@ export default function ProductList() {
       <StyledHeading>Available Fishes</StyledHeading>
       <StyledList>
         {data.map((product) => (
-          <li key={product.id}>
-            <StyledLink href={`/${product.id}`}>{product.name}</StyledLink>
+          <li key={product._id}>
+            <StyledLink href={`/${product._id}`}>{product.name}</StyledLink>
           </li>
         ))}
       </StyledList>
